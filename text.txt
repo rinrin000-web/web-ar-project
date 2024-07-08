@@ -31,3 +31,7 @@ npm init -y
 npm install express
 //tao server.js
 node server.js
+
+//nft maker creator
+https://carnaux.github.io/NFT-Marker-Creator/
+https://raw.githubusercontent.com/rinrin000-web/web-ar-project/976d97ecbca8f8298db37e93e6c0a433a20fb8ba/image/uchihamaker/uchiha2
