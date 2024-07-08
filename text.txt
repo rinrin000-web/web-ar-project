@@ -1,0 +1,33 @@
+node server.js
+
+$ openssl genrsa -out server.key 2048
+
+$ openssl req -out server.csr -key server.key -new
+Country Name (2 letter code) [XX]: # Enter
+State or Province Name (full name) []: # Enter
+Locality Name (eg, city) [Default City]: # Enter
+Organization Name (eg, company) [Default Company Ltd]:  # Enter
+Organizational Unit Name (eg, section) []: # Enter
+Common Name (eg, your name or your server's hostname) []: # Enter
+Email Address []: # Enter
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []: #Enter
+An optional company name []: # Enter
+
+従って、SAN.txtに適用するホスト名を指定する
+subjectAltName = DNS:localhost
+
+https://www.youtube.com/watch?v=U3j08xlLip4
+
+ar js image tracking https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator
+
+// chay mot may chu don gia de phuc vu trang web ar
+mkdir ar-web
+cd ar-web
+//tao tep package.json
+npm init -y
+npm install express
+//tao server.js
+node server.js
