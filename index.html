@@ -11,8 +11,26 @@
       arjs='sourceType: webcam; debugUIEnabled: false;' 
       > 
       <a-nft type="nft" url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/976d97ecbca8f8298db37e93e6c0a433a20fb8ba/image/uchihamaker/uchiha2"> 
-        <a-box color="red" depth="100" height="100" width="100"></a-box> 
+        <a-asset>
+          <img id="floor" src="/image/456floor.jpg">
+          <a-asset-item id="room" src="/image/room/scene.gltf"></a-asset-item>
+          <!-- <video id="video" src="/image/itachidance.mp4" autoplay loop="true" crossorigin="anonymous"></video> -->
+      </a-asset>
+
+      <!-- <a-entity light="type:ambient;intensity:0.2"></a-entity>
+
+      <a-entity light="type:directional;intensity:0.2" position="-0.5 1 1"></a-entity> -->
+
+      <a-sky color="#212121"></a-sky>
+
+      <!-- <a-plane src="#video" position="0 -3 5 " width="3" height="3"></a-plane> -->
+
+      
+
+      <a-entity gltf-model="#room" position="0 0 3"></a-entity>
       </a-nft> 
-        <a-entity camera></a-entity> 
+      <a-entity position="0 0 0">
+        <a-camera></a-camera>
+    </a-entity>
     </a-scene> 
 </html>
