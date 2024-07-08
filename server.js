@@ -12,7 +12,7 @@ const server = require('https').createServer(
   app
 );
 // Phục vụ các tệp tĩnh trong thư mục markers
-app.use('/markers', express.static(path.join(__dirname, 'markers')));
+// app.use('/markers', express.static(path.join(__dirname, 'markers')));
 // GET
 app.get('/', (req, res) => {
 //   res.send('Hello World!');
