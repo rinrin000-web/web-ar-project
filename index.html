@@ -2,11 +2,10 @@
 <html>
   <head>
     <title>Basic WebAR Example with Image Tracking</title>
-    <!-- <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script> -->
-    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes"> -->
   </head>
   <body>
     <a-scene
@@ -14,38 +13,126 @@
       embedded
       arjs='sourceType: webcam; debugUIEnabled: false;'
     >
-    <!-- url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/976d97ecbca8f8298db37e93e6c0a433a20fb8ba/image/uchihamaker/uchiha2" -->
+      <a-assets>
+        <!-- Add your 3D model or assets here -->
+        <!-- <a-asset-item id="3d-model" src="path_to_your_3d_model.gltf"></a-asset-item> -->
+      </a-assets>
+      
+      <!-- abenoharukasu -->
       <a-nft
         type="nft"
         url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/abenohakurasuMaker/abenoharukasu"
-        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/tenojidobutsuMaker/tenojidobutu"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance="0.01"
+        smoothThreshold="5"
       >
-        <a-asset>
-          <!-- Uncomment and modify if you want to include additional assets -->
-          <!-- <img id="floor" src="/image/456floor.jpg"> -->
-          <a-asset-item id="abenoharukasu" src="https://3dwarehouse.sketchup.com/embed/7a21cffcabea43b65f5f94a4c16411af?token=nG6YHUoKsF4=&binaryName=s21"></a-asset-item>
-
-
-        </a-asset>
-
         <!-- <a-entity
-          gltf-model="#room"
-          scale="5 5 5"
-          position="50 150 0"
+          gltf-model="#3d-model"
+          scale="0.1 0.1 0.1"
+          position="0 0 0"
           rotation="0 0 0"
           animation__rotate="property: rotation; to: 0 360 0; loop: true; dur: 10000"
         ></a-entity> -->
-        <a-box color="red" position="0 0 0" scale="10 10 10"></a-box>
-        <a-box color="blue" position="1 1 1" scale="10 10 10"></a-box>
-        <!-- <iframe  src="#abenoharukasu" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="580" height="326" allowfullscreen></iframe> -->
+        <a-box color="blue" position="0 0 0" scale="50 50 50"></a-box>
+      </a-nft>
+      
+      <!-- tenojidobutu -->
+      <a-nft
+        type="nft"
+        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/tenojidobutsuMaker/tenojidobutu"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance="0.01"
+        smoothThreshold="5"
+      >
+        <a-box color="red" position="0 0 0" scale="50 50 50"></a-box>
       </a-nft>
 
-      <!-- Uncomment and modify if you want to add additional entities or elements -->
-      <!-- <a-entity light="type:ambient;intensity:0.2"></a-entity>
-      <a-entity light="type:directional;intensity:0.2" position="-0.5 1 1"></a-entity>
-      <a-sky color="#212121"></a-sky>
-      <a-plane src="#video" position="0 -3 5" width="3" height="3"></a-plane> -->
-      
+      <!-- dotonboriMaker -->
+      <a-nft
+        type="nft"
+        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/dotonboriMaker/dotonbori"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance="0.01"
+        smoothThreshold="5"
+      >
+        <a-box color="orange" position="0 0 0" scale="50 50 50"></a-box>
+      </a-nft>
+
+      <!-- kaiyukanMaker -->
+      <a-nft
+        type="nft"
+        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/kaiyukanMaker/kaiyukan"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance="0.01"
+        smoothThreshold="5"
+      >
+        <a-box color="orange" position="0 0 0" scale="50 50 50"></a-box>
+      </a-nft>
+
+      <!-- nishitennojiMaker -->
+      <a-nft
+        type="nft"
+        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/nishitennojiMaker/nishitennoji"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance="0.01"
+        smoothThreshold="5"
+      >
+        <a-box color="orange" position="0 0 0" scale="50 50 50"></a-box>
+      </a-nft>
+
+      <!-- oosakakurasiMaker -->
+      <a-nft
+        type="nft"
+        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/oosakakurasiMaker/oosakakurasi"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance="0.01"
+        smoothThreshold="5"
+      >
+        <a-box color="orange" position="0 0 0" scale="50 50 50"></a-box>
+      </a-nft>
+
+      <!-- shinimamiyaMaker -->
+      <a-nft
+        type="nft"
+        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/shinimamiyaMaker/shinimamiya"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance="0.01"
+        smoothThreshold="5"
+      >
+        <a-box color="orange" position="0 0 0" scale="50 50 50"></a-box>
+      </a-nft>
+
+      <!-- tenenonsenMaker -->
+      <a-nft
+        type="nft"
+        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/tenenonsenMaker/tenenonsen"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance="0.01"
+        smoothThreshold="5"
+      >
+        <a-box color="orange" position="0 0 0" scale="50 50 50"></a-box>
+      </a-nft>
+
+      <!-- tennenbashiMaker -->
+      <a-nft
+        type="nft"
+        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/tennenbashiMaker/tennenbashi"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance="0.01"
+        smoothThreshold="5"
+      >
+        <a-box color="orange" position="0 0 0" scale="50 50 50"></a-box>
+      </a-nft>
+
       <a-entity camera></a-entity>
     </a-scene>
   </body>
