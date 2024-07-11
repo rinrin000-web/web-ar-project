@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sun-shroom
+* source:	https://sketchfab.com/3d-models/sun-shroom-2e45aedf7d6e4ad8967b0b3bd7bea0cf
+* author:	besfortk1 (https://sketchfab.com/besfortk1)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sun-shroom" (https://sketchfab.com/3d-models/sun-shroom-2e45aedf7d6e4ad8967b0b3bd7bea0cf) by besfortk1 (https://sketchfab.com/besfortk1) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

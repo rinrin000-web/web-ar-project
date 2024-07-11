@@ -1,139 +1,107 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Basic WebAR Example with Image Tracking</title>
+    <title>WebAR</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <meta name="apple-mobile-web-app-capable" content="yes"> -->
   </head>
   <body>
     <a-scene
       vr-mode-ui="enabled: false"
       embedded
-      arjs='sourceType: webcam; debugUIEnabled: false;'
+      arjs='sourceType: webcam; trackingBackend: artoolkit; debugUIEnabled: true; markersAreaEnabled: false;'
     >
       <a-assets>
-        <!-- Add your 3D model or assets here -->
-        <!-- <a-asset-item id="3d-model" src="path_to_your_3d_model.gltf"></a-asset-item> -->
+        <img id="grass" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/grass.jpg">
+        <img id="image" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/behappy.png">
+        <a-asset-item id="home" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/home/scene.gltf"></a-asset-item>
+        <a-asset-item id="dog" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/dog/scene.gltf"></a-asset-item>
+        <a-asset-item id="sun" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/sun/scene.gltf"></a-asset-item>
+        <a-asset-item id="shroom" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/shroom/scene.gltf"></a-asset-item>
+        <a-asset-item id="doraemon" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/doraemon/scene.gltf"></a-asset-item>
+        <a-asset-item id="tree" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/tree/scene.gltf"></a-asset-item>
+        <a-asset-item id="flower" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/flower/scene.gltf"></a-asset-item>
+        <a-asset-item id="white_flower" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/white_flower/scene.gltf"></a-asset-item>
+        <a-asset-item id="margarita_flower" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/margarita_flower/scene.gltf"></a-asset-item>
+        <a-asset-item id="garden" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/a_house_with_a_garden/scene.gltf"></a-asset-item>
+        <a-asset-item id="japanese_shinto_shrine" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/japanese_shinto_shrine/scene.gltf"></a-asset-item>
+        <a-asset-item id="floating_fox" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/floating_fox/scene.gltf"></a-asset-item>
+        <a-asset-item id="sakura" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/sakura/scene.gltf"></a-asset-item>
+        <a-asset-item id="calligraphy_school" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/calligraphy_school/scene.gltf"></a-asset-item>
+        <a-asset-item id="pokemon_tree" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/pokemon_tree/scene.gltf"></a-asset-item>
+        <a-asset-item id="jery" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/jerry/scene.gltf"></a-asset-item>
+        <a-asset-item id="pool" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/pool/scene.gltf"></a-asset-item>
+        <a-asset-item id="fish" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/fish/scene.gltf"></a-asset-item>
+        <a-asset-item id="fish2" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/fish2/scene.gltf"></a-asset-item>
+        <a-asset-item id="fish3" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/fish3/scene.gltf"></a-asset-item>
+
       </a-assets>
-      
-      <!-- abenoharukasu -->
+
       <a-nft
         type="nft"
-        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/abenohakurasuMaker/abenoharukasu"
+        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/imageMaker/imageMaker"
         smooth="true"
         smoothCount="10"
         smoothTolerance="0.01"
         smoothThreshold="5"
       >
-        <!-- <a-entity
-          gltf-model="#3d-model"
-          scale="0.1 0.1 0.1"
-          position="0 0 0"
-          rotation="0 0 0"
-          animation__rotate="property: rotation; to: 0 360 0; loop: true; dur: 10000"
-        ></a-entity> -->
-        <a-box color="blue" position="0 0 0" scale="50 50 50"></a-box>
-      </a-nft>
-      
-      <!-- tenojidobutu -->
-      <a-nft
-        type="nft"
-        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/tenojidobutsuMaker/tenojidobutu"
-        smooth="true"
-        smoothCount="10"
-        smoothTolerance="0.01"
-        smoothThreshold="5"
-      >
-        <a-box color="red" position="0 0 0" scale="50 50 50"></a-box>
+
+        <a-entity id="sun" gltf-model="#sun" position="3.562 9.094 2.127" scale="0.005 0.005 0.005" rotation="4 0 0"
+        animation="property: position; to: 3.81561 6.28075 -6.0; loop: true; dur: 100000; easing: linear">
+
+        <a-light type="directional" intensity="1" color="#ffffff"></a-light>
+        </a-entity>
+
+
+        <a-light type="ambient" color="#445451"></a-light>
+
+        <a-sphere src="#grass" radius="5" segments-height="18" segments-width="36" material="" geometry="" 
+        animation__rotation="property: rotation; to: 360 360 360; loop: true; dur: 200000" material="" geometry="">
+          <a-entity id="home" gltf-model="#home" position="-3.13291 4.83712 -2.99612" scale="0.4 0.4 0.4" rotation="4 0 0"></a-entity>
+          <a-entity id="dog" gltf-model="#dog" position="0.01933 4.22541 3.58595" scale="0.6 0.6 0.4" rotation="45 0 0" animation__rotation="property: position;from:0.01933 4.22541 3.58595 ;to: 0.01933 5.0 3.58595; loop: true; dur: 5000"></a-entity>
+          <a-entity id="shroom" gltf-model="#shroom" position="-2.09905 3.2891 3.44353" scale="0.4 0.4 0.4" rotation=""></a-entity>
+          <a-entity id="tree" gltf-model="#tree" position="-3.45255 5.07833 -3.28413" scale="0.6 1 0.4" rotation="-45 0 29.999999999999996"></a-entity>
+          <a-image id="image"  position="-0.21907 1.79162 5.32123" scale="2.5 2.5 2.5"  material="src: #image" geometry="" rotation="-20 0 0" visible="true"></a-image>
+          <a-entity id="fishBox" animation__rotation="property: rotation; to: 360 0 0; loop: true; dur: 23000">
+            <a-entity id="doraemon" visible="true" gltf-model="#doraemon" position="2.60715 4.04865 1.21701" scale="0.4 0.4 0.4" rotation="0 0 -32"></a-entity>
+          </a-entity>
+          <a-entity id="flower" gltf-model="#flower" position="2.24004 2.35381 3.99164" scale="0.01 0.01 0.01" rotation="0 70 50"></a-entity>
+          <a-entity id="flower1" gltf-model="#flower" position="-2.33685 -4.28227 -1.15254" scale="0.01 0.01 0.01" rotation="0 0 -180"></a-entity>
+          <a-entity id="flower2" gltf-model="#flower" position="2.24004 2.35381 3.99164" scale="0.01 0.01 0.01" rotation="0 70 50"></a-entity>
+          <a-entity id="flower3" gltf-model="#flower" position="2.24004 2.35381 3.99164" scale="0.01 0.01 0.01" rotation="0 70 50"></a-entity>
+          <a-entity id="whiwte_flower" gltf-model="#white_flower" position="-2.31215 4.04865 1.60526" scale="0.01 0.01 0.01" rotation="0 0 29.999999999999996"></a-entity>
+          <a-entity id="whiwte_flower1" gltf-model="#white_flower" position="2.51985 -1.59462 4.20516" scale="0.01 0.02 0.01" rotation="70 0 0"></a-entity>
+          <a-entity id="whiwte_flower2" gltf-model="#white_flower" position="0.26056 -4.27222 -2.16919" scale="0.01 0.01 0.01" rotation="0 0 -180"></a-entity>
+          <a-entity id="whiwte_flower3" gltf-model="#white_flower" position="-2.31215 4.04865 1.60526" scale="0.01 0.01 0.01" rotation="0 0 29.999999999999996"></a-entity>
+          <a-entity id="whiwte_flower4" gltf-model="#white_flower" position="-2.31215 4.04865 1.60526" scale="0.01 0.01 0.01" rotation="0 0 29.999999999999996"></a-entity>
+          <a-entity id="whiwte_flower5" gltf-model="#white_flower" position="1.22086 -0.4276 -4.68594" scale="0.01 0.01 0.01" rotation="-90 0 0"></a-entity>
+          <a-entity id="margarita_flower" gltf-model="#margarita_flower" position="-3.02016 -0.02347 4.09748" scale="0.5 0.5 0.5" rotation="50 0 0"></a-entity>
+          <a-entity id="margarita_flower2" gltf-model="#margarita_flower" position="-0.5319 -2.43858 4.00472" scale="0.5 0.5 0.5" rotation="80 0 0"></a-entity>
+          <a-entity id="margarita_flower3" gltf-model="#margarita_flower" position="-3.25285 -2.56595 2.84067" scale="0.5 0.5 0.5" rotation="80 0 90"></a-entity>
+          <a-entity id="garden" gltf-model="#garden" position="4.88528 -0.17243 0.90739" scale="0.4 0.4 0.4" rotation="0 0 -90"></a-entity>
+          <a-entity id="japanese_shinto_shrine" gltf-model="/image/japanese_shinto_shrine/scene.gltf" position="-4.49549 0.0182 1.33006" scale="10 10 10" rotation="0 0 90"></a-entity>
+          <a-entity id="floating_fox" gltf-model="#floating_fox" position="-6.94601 1.75415 2.00041" scale="0.3 0.3 0.3" rotation="0 0 90" animation__rotation="property: rotation; to: 0 0 -45 from:360 0 -45 ; loop: true; dur: 50000"></a-entity>
+          <a-entity id="sakura" gltf-model="#sakura" position="3.96156 2.77428 0.02645" scale="0.15 0.15 0.15" rotation="0 0 -45"></a-entity>
+          <a-entity id="calligraphy_school" gltf-model="#calligraphy_school" position="0.17947 -4.44222 2.422" scale="1.5 1.5 1.5" rotation="-29.999999999999996 0 180"></a-entity>
+          <a-entity id="pokemon_tree" gltf-model="#pokemon_tree" position="-3.19906 -4.159 0.59406" scale="1.5 1.5 1.5" rotation="0 0 119.99999999999999"></a-entity>
+          <a-entity id="fishBox" animation__rotation="property: rotation ;to: 360 0 0; loop: true; dur: 20000">
+            <a-entity id="jery" gltf-model="#jerry" position="3.64665 -3.32551 0.8898" scale="0.1 0.1 0.1" rotation="180 0 -50"></a-entity>
+          </a-entity>
+          <a-entity id="pool" gltf-model="#pool" position="0.81116 1.68025 -4.77664" scale="0.3 0.3 0.3" rotation="59.99999999999999 180 0"></a-entity>
+          <a-entity id="fish" gltf-model="#fish" position="3.34018 2.12231 -5.61885" scale="0.1 0.1 0.1" rotation="59.99999999999999 180 0"></a-entity>
+          <a-entity id="fishBox" animation__rotation="property: rotation; to: 0 360 0; loop: true; dur: 20000">
+            <a-entity id="fish" gltf-model="#fish" position="2.149 -0.53433 -6.19329" scale="0.1 0.1 0.1" rotation="0 -90 0"></a-entity>
+            <a-entity id="fish2" gltf-model="#fish2" position="-1.52426 0.50656 -5.90567" scale="0.003 0.003 0.003" rotation="0 119.99999999999999 70"></a-entity>
+            <a-entity id="fish3" gltf-model="#fish3" position="0.28012 4.26362 -4.53531" scale="0.01 0.01 0.01" rotation="0 180 0"></a-entity>
+          </a-entity>
+        </a-sphere>
+
       </a-nft>
 
-      <!-- dotonboriMaker -->
-      <a-nft
-        type="nft"
-        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/dotonboriMaker/dotonbori"
-        smooth="true"
-        smoothCount="10"
-        smoothTolerance="0.01"
-        smoothThreshold="5"
-      >
-        <a-box color="orange" position="0 0 0" scale="50 50 50"></a-box>
-      </a-nft>
+      <a-entity position="0.8851 -9.68001 9.35592">
+        <a-camera position="-0.60499 10.91835 3.27357" rotation="0 0.2291831180523293 0" look-controls="" wasd-controls="" camera="" data-aframe-inspector-original-camera=""></a-camera>
+      </a-entity>
 
-      <!-- kaiyukanMaker -->
-      <a-nft
-        type="nft"
-        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/kaiyukanMaker/kaiyukan"
-        smooth="true"
-        smoothCount="10"
-        smoothTolerance="0.01"
-        smoothThreshold="5"
-      >
-        <a-box color="orange" position="0 0 0" scale="50 50 50"></a-box>
-      </a-nft>
-
-      <!-- nishitennojiMaker -->
-      <a-nft
-        type="nft"
-        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/nishitennojiMaker/nishitennoji"
-        smooth="true"
-        smoothCount="10"
-        smoothTolerance="0.01"
-        smoothThreshold="5"
-      >
-        <a-box color="orange" position="0 0 0" scale="50 50 50"></a-box>
-      </a-nft>
-
-      <!-- oosakakurasiMaker -->
-      <a-nft
-        type="nft"
-        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/oosakakurasiMaker/oosakakurasi"
-        smooth="true"
-        smoothCount="10"
-        smoothTolerance="0.01"
-        smoothThreshold="5"
-      >
-        <a-box color="orange" position="0 0 0" scale="50 50 50"></a-box>
-      </a-nft>
-
-      <!-- shinimamiyaMaker -->
-      <a-nft
-        type="nft"
-        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/shinimamiyaMaker/shinimamiya"
-        smooth="true"
-        smoothCount="10"
-        smoothTolerance="0.01"
-        smoothThreshold="5"
-      >
-        <a-box color="orange" position="0 0 0" scale="50 50 50"></a-box>
-      </a-nft>
-
-      <!-- tenenonsenMaker -->
-      <a-nft
-        type="nft"
-        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/tenenonsenMaker/tenenonsen"
-        smooth="true"
-        smoothCount="10"
-        smoothTolerance="0.01"
-        smoothThreshold="5"
-      >
-        <a-box color="orange" position="0 0 0" scale="50 50 50"></a-box>
-      </a-nft>
-
-      <!-- tennenbashiMaker -->
-      <a-nft
-        type="nft"
-        url="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/tennenbashiMaker/tennenbashi"
-        smooth="true"
-        smoothCount="10"
-        smoothTolerance="0.01"
-        smoothThreshold="5"
-      >
-        <a-box color="orange" position="0 0 0" scale="50 50 50"></a-box>
-      </a-nft>
-
-      <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>

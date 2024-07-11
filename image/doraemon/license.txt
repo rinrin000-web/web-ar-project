@@ -1,0 +1,11 @@
+Model Information:
+* title:	Suraj-doremon
+* source:	https://sketchfab.com/3d-models/suraj-doremon-61f68f52f5384161a2da26a5e4a1c174
+* author:	Suraj Jena (https://sketchfab.com/suraj.cse030)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Suraj-doremon" (https://sketchfab.com/3d-models/suraj-doremon-61f68f52f5384161a2da26a5e4a1c174) by Suraj Jena (https://sketchfab.com/suraj.cse030) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
