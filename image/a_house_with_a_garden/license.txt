@@ -1,0 +1,11 @@
+Model Information:
+* title:	A house with a garden
+* source:	https://sketchfab.com/3d-models/a-house-with-a-garden-14b6cb1eda0145d383f271cf128ee73f
+* author:	CGulia (https://sketchfab.com/CGulia)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "A house with a garden" (https://sketchfab.com/3d-models/a-house-with-a-garden-14b6cb1eda0145d383f271cf128ee73f) by CGulia (https://sketchfab.com/CGulia) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
