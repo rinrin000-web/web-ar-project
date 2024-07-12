@@ -1,20 +1,100 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Basic WebAR Example</title>
-    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@ar-js-org/ar.js/aframe/build/aframe-ar.js"></script>
+    <title>WebAR</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+   
   </head>
-  <body style="margin: 0px; overflow: hidden;">
-    <a-scene embedded arjs="sourceType: webcam;">
-      <!-- AR Marker Definition -->
-      <a-marker preset="hiro">
-        <!-- Place 3D Model -->
-        <a-box position="0 0.5 0" material="color: green;"></a-box>
-      </a-marker>
+  <body>
+    <a-scene
+      vr-mode-ui="enabled: false"
+      embedded
+      arjs='sourceType: webcam; trackingBackend: artoolkit; debugUIEnabled: true; markersAreaEnabled: false;'
+    >
+      <a-assets>
+        <img id="grass" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/grass.jpg">
+        <img id="image" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/behappy.png">
+        <a-asset-item id="home" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/home/scene.gltf"></a-asset-item>
+        <a-asset-item id="dog" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/dog/scene.gltf"></a-asset-item>
+        <a-asset-item id="sun" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/sun/scene.gltf"></a-asset-item>
+        <a-asset-item id="shroom" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/shroom/scene.gltf"></a-asset-item>
+        <a-asset-item id="doraemon" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/doraemon/scene.gltf"></a-asset-item>
+        <a-asset-item id="japanese_style_bridge" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/japanese_style_bridge/scene.gltf"></a-asset-item>
+        <a-asset-item id="flower" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/flower/scene.gltf"></a-asset-item>
+        <a-asset-item id="white_flower" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/white_flower/scene.gltf"></a-asset-item>
+        <a-asset-item id="margarita_flower" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/margarita_flower/scene.gltf"></a-asset-item>
+        <a-asset-item id="garden" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/a_house_with_a_garden/scene.gltf"></a-asset-item>
+        <a-asset-item id="japanese_shinto_shrine" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/japanese_shinto_shrine/scene.gltf"></a-asset-item>
+        <a-asset-item id="floating_fox" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/floating_fox/scene.gltf"></a-asset-item>
+        <a-asset-item id="sakura" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/sakura/scene.gltf"></a-asset-item>
+        <a-asset-item id="calligraphy_school" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/calligraphy_school/scene.gltf"></a-asset-item>
+        <a-asset-item id="pokemon_tree" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/pokemon_tree/scene.gltf"></a-asset-item>
+        <a-asset-item id="jery" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/jerry/scene.gltf"></a-asset-item>
+        <a-asset-item id="pool" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/pool/scene.gltf"></a-asset-item>
+        <a-asset-item id="fish" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/fish/scene.gltf"></a-asset-item>
+        <a-asset-item id="fish2" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/fish2/scene.gltf"></a-asset-item>
+        <a-asset-item id="fish3" src="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/fish3/scene.gltf"></a-asset-item>
 
-      <!-- Camera Settings -->
-      <a-entity camera></a-entity>
+      </a-assets>
+
+
+      <a-entity id="sun" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/sun/scene.gltf" position="48.29571 169.64545 41.74378" scale="0.1 0.1 0.1" rotation="4 0 0">
+
+        <a-light type="directional" intensity="1" color="#ffffff" light=""></a-light>
+        </a-entity>
+
+        <a-light type="directional" intensity="1" color="#ffffff"></a-light>
+        </a-entity>
+
+
+        <a-light type="ambient" color="#445451"></a-light>
+
+        <a-sphere src="#grass" radius="100" segments-height="18" segments-width="36" material="" geometry="" 
+        animation__rotation="property: rotation; to: 360 360 360; loop: true; dur: 200000" material="" geometry="">
+        <a-entity id="home" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/home/scene.gltf" position="-67.76691 96.78095 -62.80024" scale="8 8 8" rotation="4 0 0"></a-entity>
+        <a-entity id="dog" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/dog/scene.gltf" position="-2.75403 80.29652 75.60355" scale="12 12 12" rotation="45 0 0" animation__rotation="property: position; from: -2.75403 80.29652 75.60355; to: -2.75403 90.29652 75.60355; loop: NaN; dur: 2000"></a-entity>
+        <a-entity id="shroom" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/shroom/scene.gltf" position="-39.92895 48.52583 81.23512" scale="8 8 8" rotation=""></a-entity>
+        <a-entity id="japanese_style_bridge" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/japanese_style_bridge/scene.gltf" position="-86.68974 68.56789 2.51431" scale="5 5 5" rotation="0 0 50"></a-entity>
+          <a-image id="image" position="-8.81446 14.18895 102.19104" scale="50 50 50" material="src: #image" geometry="" rotation="-20 0 0" visible=""></a-image>
+          <a-entity id="fishBox" animation__rotation="property: rotation; to: 360 0 0; loop: true; dur: 23000">
+            <a-entity id="doraemon" visible="" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/doraemon/scene.gltf" position="50.98989 -46.60778 67.7425" scale="7.95 8 8" rotation="119.99999999999999 0 -29.999999999999996"></a-entity>
+          </a-entity>
+          <a-entity id="flower" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/flower/scene.gltf" position="39.11675 -37.4972 83.3661" scale="0.2 0.2 0.2" rotation="110 0 0"></a-entity>
+          <a-entity id="flower1" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/flower/scene.gltf" position="36.5005 -31.46118 -85.30354" scale="0.2 0.2 0.2" rotation="-80 0 0"></a-entity>
+          <a-entity id="flower2" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/flower/scene.gltf" position="-53.59895 -60.55626 -53.19695" scale="0.2 0.2 0.2" rotation="-100 0 0"></a-entity>
+          <a-entity id="flower3" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/flower/scene.gltf" position="52.84131 -83.01622 11.01507" scale="0.2 0.2 0.2" rotation="0 0 -119.99999999999999"></a-entity>
+          <a-entity id="whiwte_flower" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/white_flower/scene.gltf" position="-44.4444 -59.55179 70.30399" scale="0.5 0.5 0.5" rotation="0 0 50"></a-entity>
+          <a-entity id="whiwte_flower1" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/white_flower/scene.gltf" position="-80.95792 21.7188 -52.29462" scale="0.3 0.3 0.3" rotation="0 0 29.999999999999996"></a-entity>
+          <a-entity id="whiwte_flower2" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/white_flower/scene.gltf" position="38.82201 -62.82007 -68.34844" scale="0.3 0.3 0.3" rotation="0 0 -180"></a-entity>
+          <a-entity id="whiwte_flower3" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/white_flower/scene.gltf" position="78.09705 -39.36446 -42.66253" scale="0.3 0.3 0.3" rotation="0 0 -50"></a-entity>
+          <a-entity id="whiwte_flower4" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/white_flower/scene.gltf" position="-68.15199 64.44153 24.33439" scale="0.3 0.3 0.3" rotation="0 0 29.999999999999996"></a-entity>
+          <a-entity id="whiwte_flower5" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/white_flower/scene.gltf" position="86.12929 45.12532 -4.03017" scale="0.3 0.3 0.3" rotation="0 0 -50"></a-entity>
+          <a-entity id="margarita_flower1" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/margarita_flower/scene.gltf" position="-75.25653 -3.92208 66.46065" scale="5 5 5" rotation="50 0 0"></a-entity>
+          <a-entity id="margarita_flower2" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/margarita_flower/scene.gltf" position="27.91882 -3.92208 93.34311" scale="5 5 5" rotation="80 0 0"></a-entity>
+          <a-entity id="margarita_flower3" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/margarita_flower/scene.gltf" position="31.48137 53.51021 77.58813" scale="5 5 5" rotation=""></a-entity>
+          <a-entity id="garden" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/a_house_with_a_garden/scene.gltf" position="87.22479 -0.18869 39.97437" scale="8 8 8" rotation="0 0 -90"></a-entity>
+          <a-entity id="japanese_shinto_shrine" gltf-model="/image/japanese_shinto_shrine/scene.gltf" position="-94.93702 -2.04362 34.34376" scale="200 200 200" rotation="0 0 90"></a-entity>
+          <a-entity id="floating_fox" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/floating_fox/scene.gltf" position="-146.98144 33.60987 -3.49185" scale="6 6 6" rotation="0 0 90" animation__rotation="property: rotation; to: 0 0 90 from:360 0 -90; loop: NaN; dur: 10000"></a-entity>
+          <a-entity id="sakura" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/sakura/scene.gltf" position="69.26232 75.15805 -0.77007" scale="3 3 3" rotation="0 0 -45"></a-entity>
+          <a-entity id="calligraphy_school" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/calligraphy_school/scene.gltf" position="1.98402 -97.90555 17.46198" scale="30 30 30" rotation="0 0 180"></a-entity>
+          <a-entity id="pokemon_tree" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/pokemon_tree/scene.gltf" position="-68.51328 -68.38701 26.24702" scale="30 30 30" rotation="0 0 119.99999999999999"></a-entity>
+          <a-entity id="fishBox" animation__rotation="property: rotation ;to: 360 0 0; loop: true; dur: 20000">
+            <a-entity id="jery" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/jerry/scene.gltf" position="85.47065 -34.42414 42.9038" scale="2 2 2" rotation="0 -180 90"></a-entity>
+          </a-entity>
+          <a-entity id="pool" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/pool/scene.gltf" position="10.13615 42.41544 -92.049" scale="6 6 6" rotation="59.99999999999999 180 0"></a-entity>
+          <a-entity id="fishBox" animation__rotation="property: rotation; to: 0 360 0; loop: true; dur: 20000">
+            <a-entity id="fish" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/fish/scene.gltf" position="95.35885 22.61547 -79.31759" scale="2 2 2" rotation="59.99999999999999 180 0"></a-entity>
+            <a-entity id="fish1" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/fish/scene.gltf" position="52.32891 -23.5269 -105.07488" scale="2 2 2" rotation="0 -90 0"></a-entity>
+            <a-entity id="fish2" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/fish2/scene.gltf" position="-4.97644 -0.66755 -131.81092" scale="0.06 0.06 0.06" rotation="0 119.99999999999999 70"></a-entity>
+            <a-entity id="fish3" gltf-model="https://raw.githubusercontent.com/rinrin000-web/web-ar-project/master/image/fish3/scene.gltf" position="32.82689 88.51629 -78.976" scale="0.2 0.2 0.2" rotation="0 180 0"></a-entity>
+          </a-entity>
+        </a-sphere>
+
+
+        <a-entity>
+            <a-camera></a-camera>
+          </a-entity>
     </a-scene>
   </body>
 </html>

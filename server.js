@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 //   res.send('Hello World!');
     // const filePath = path.join(__dirname, 'index.html');
     // res.sendFile(filePath);
-    res.sendFile(path.join(__dirname,'index.html'));
+    res.sendFile(path.join(__dirname,'indexjs.html'));
 });
 
 server.listen(3000, () => {
