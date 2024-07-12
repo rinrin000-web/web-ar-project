@@ -1,0 +1,11 @@
+Model Information:
+* title:	Japanese Style Bridge
+* source:	https://sketchfab.com/3d-models/japanese-style-bridge-035aaebed58342d88fb1b81af332344e
+* author:	AinoK (https://sketchfab.com/kittywarning)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Japanese Style Bridge" (https://sketchfab.com/3d-models/japanese-style-bridge-035aaebed58342d88fb1b81af332344e) by AinoK (https://sketchfab.com/kittywarning) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
